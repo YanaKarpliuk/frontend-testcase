@@ -13,13 +13,13 @@ export default function CandidateForm() {
   const dispatch = useDispatch<any>();
   const candidates = useSelector(selectCandidateData);
 
-  function handleSubmit(e: any) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     const form = e.currentTarget;
-    const name = form.elements.name.value;
-    const email = form.elements.email.value;
-    const feedback = form.elements.feedback.value;
-    const grade = form.elements.grade.value;
-    const passed = form.elements.passed.value;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const feedback = (form.elements.namedItem('feedback') as HTMLInputElement).value;
+    const grade = (form.elements.namedItem('grade') as HTMLInputElement).value;
+    const passed = (form.elements.namedItem('passed') as HTMLInputElement).value;
 
     e.preventDefault();
 
