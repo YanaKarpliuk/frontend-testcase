@@ -134,15 +134,6 @@
       "grade": 11,
       "passed": "no",
       "createdAt": "2022-12-07T10:45:30.437Z"
-    },
-    {
-      "id": "3j6P61-WRttbPvQNxaaPw",
-      "name": "Yana Karpliuk",
-      "email": "yanakarpliuk99@gmail.com",
-      "feedback": "Great job!",
-      "grade": 20,
-      "passed": "yes",
-      "createdAt": "2022-12-07T11:59:26.336Z"
     }
   ]
 }
