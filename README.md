@@ -2,7 +2,7 @@
 
 ## Початок роботи
 **npm i** - завантаження всіх залежностей <br/>
-**json-server --watch db.json** - запуск сервера (має бути на http://localhost:3000/data) <br/>
+**json-server --watch db.json** - запуск сервера (має бути на ht<span>tp://</span>localhost:3000/data) <br/>
 **npm start** - запуск сайту локально
 
 ### Відео роботи сайту
