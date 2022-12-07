@@ -15,7 +15,7 @@ export interface CandidateData {
 interface DataState {
   candidateData: CandidateData[];
   isLoading: boolean;
-  error: any;
+  error: null | unknown;
   total: number | null;
   page: number | null;
 }

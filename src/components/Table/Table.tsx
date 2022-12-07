@@ -7,6 +7,7 @@ import {
   selectIsLoading,
   selectTotal,
   selectPage,
+  CandidateData
 } from "../Store/dataSlice";
 import TableItem from "./TableItem";
 import { fetchCandidates } from "../Store/operations";
@@ -62,7 +63,7 @@ export default function CandidateTable() {
               </tr>
             </thead>
             <tbody className="">
-              {data.map((item: any) => (
+              {data.map((item: CandidateData) => (
                 <TableItem
                   key={item.id}
                   id={item.id}
