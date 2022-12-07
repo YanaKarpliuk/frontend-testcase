@@ -1,0 +1,34 @@
+.table {
+  max-width: 1200px;
+  min-width: 750px;
+}
+
+.table-container {
+  overflow-x: scroll;
+}
+
+@include media-breakpoint-up(xl) {
+  .table-container {
+    overflow-x: hidden;
+  }
+}
+
+.bi-x-circle {
+  color: red;
+}
+
+.bi-check-circle {
+  color: green;
+}
+
+td, th {
+  text-align: center;
+}
+
+.feedback-cell {
+  text-align: start;
+}
+
+.loader {
+  margin-left: 50%;
+}
