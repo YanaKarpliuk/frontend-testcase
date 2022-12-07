@@ -10,8 +10,6 @@ import Collapse from "react-bootstrap/Collapse";
 import { useState } from "react";
 
 export default function CandidateForm() {
-  const [validated, setValidated] = useState(false);
-
   const dispatch = useDispatch<any>();
   const candidates = useSelector(selectCandidateData);
 

@@ -1,6 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
-// import { selectPage } from "./dataSlice";
 import axios from "axios";
 
 const url = `http://localhost:3000/data?_sort=createdAt&_order=desc&_limit=10`;

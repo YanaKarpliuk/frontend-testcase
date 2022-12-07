@@ -1,9 +1,5 @@
-// import { useDispatch } from "react-redux";
-// import { cartActions } from "../store/cartSlice";
-// import { Notify } from "notiflix/build/notiflix-notify-aio";
-
 type TableItemProps = {
-  id: string;
+  id?: string;
   name: string;
   email: string;
   feedback: string;
@@ -12,7 +8,6 @@ type TableItemProps = {
 };
 
 export default function TableItem({
-  id,
   name,
   email,
   feedback,
@@ -20,18 +15,18 @@ export default function TableItem({
   passed,
 }: TableItemProps) {
   return (
-    <tr className="">
+    <tr>
       <td>
-        <p className="">{name}</p>
+        <p>{name}</p>
       </td>
-      <td className="">
+      <td>
         <p className="mx-[10px]">{email}</p>
       </td>
       <td>
         <p className="feedback-cell">{feedback}</p>
       </td>
       <td>
-        <p className="">{grade}</p>
+        <p>{grade}</p>
       </td>
       <td>
         {passed === "no" ? (

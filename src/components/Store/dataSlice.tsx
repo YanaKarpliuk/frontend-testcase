@@ -1,5 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { createSlice } from "@reduxjs/toolkit";
 import { fetchCandidates, addCandidate } from "./operations";
 import { RootState } from "./store";
 
@@ -26,14 +25,13 @@ const initialState: DataState = {
   isLoading: false,
   error: null,
   page: null,
-  total: null
+  total: null,
 };
 
 const dataSlice = createSlice({
   name: "candidateData",
   initialState,
-  reducers: {
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCandidates.pending, (state) => {
       state.isLoading = true;
@@ -44,10 +42,10 @@ const dataSlice = createSlice({
 
       if (state.page !== action.meta.arg) {
         state.candidateData = [...state.candidateData, ...action.payload.data];
-        state.page = action.meta.arg
+        state.page = action.meta.arg;
       }
-      
-      state.total = parseInt(action.payload.headers['x-total-count'] || '0')
+
+      state.total = parseInt(action.payload.headers["x-total-count"] || "0");
     });
     builder.addCase(fetchCandidates.rejected, (state, action) => {
       state.isLoading = false;
@@ -69,19 +67,14 @@ const dataSlice = createSlice({
   },
 });
 
-export const selectCandidateData = (state: RootState) => state.data.candidateData;
+export const selectCandidateData = (state: RootState) =>
+  state.data.candidateData;
 
 export const selectTotal = (state: RootState) => state.data.total;
 
 export const selectPage = (state: RootState) => state.data.page;
 
 export const selectIsLoading = (state: RootState) => state.data.isLoading;
-
-// export const selectPage = (state: {
-//   data: {
-//     page: number;
-//   };
-// }) => state.data.page;
 
 export const dataActions = dataSlice.actions;
 
